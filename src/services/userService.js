@@ -46,6 +46,8 @@ const getDetailInforDoctor = (inPutId) => {
     return axios.get(`/api/get-detail-doctor-by-id?id=${inPutId}`)
 }
 
+
+
 export {handleLoginApi, getAllUsers, creataNewUserServie, deleteUserService,
      editUserService, getAllCodeService, getTopDoctorHomeService, getAllDoctors, 
      saveDetailDoctorService, getDetailInforDoctor,
