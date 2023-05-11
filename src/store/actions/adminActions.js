@@ -251,19 +251,19 @@ export const saveDetailDoctor = (data) => {
         try {
             let res = await saveDetailDoctorService(data);
             if(res && res.errCode === 0){
-                toast.success("Save infot detail doctor succeed");
+                toast.success("Save infor detail doctor succeed");
                 dispatch({
                     type: actionTypes.SAVE_DETAIL_DOCTOR_SUCCESS,            
                 })
             }else{
                 console.log('err res', res)
-                toast.error("Save infot detail doctor error");
+                toast.error("Save infor detail doctor error");
                 dispatch({
                     type: actionTypes.SAVE_DETAIL_DOCTOR_FAILED,
                 })
             }
          } catch (e) {
-            toast.error("Save infot detail doctor error");
+            toast.error("Save infor detail doctor error");
             console.log('SAVE_DETAIL_DOCTOR_FAILED:', e)
             dispatch({
                 type: actionTypes.SAVE_DETAIL_DOCTOR_FAILED,
