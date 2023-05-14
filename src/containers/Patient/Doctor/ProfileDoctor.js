@@ -56,7 +56,7 @@ class ProfileDoctor extends Component {
             return(
                 <>
                     <div>{time} - {date}</div>
-                    <div>Mien phi dat lich</div>
+                    <div><FormattedMessage id='patient.booking-modal.priceBooking'/></div>
                 </>
             )
         }
@@ -71,8 +71,6 @@ class ProfileDoctor extends Component {
              nameVi = `${dataProfile.positionData.valueVi}, ${dataProfile.lastName} ${dataProfile.firstName}`
              nameEn = `${dataProfile.positionData.valueEn}, ${dataProfile.firstName} ${dataProfile.lastName}`
         }  
-
-        console.log('check props:', dataTime)
         return (  
             <div className='profile-doctor-container'>
                 <div className='intro-doctor'>
@@ -103,7 +101,7 @@ class ProfileDoctor extends Component {
                     </div>            
                 </div>
                 <div className='price'>
-                            Giá khám:
+                            <FormattedMessage id='patient.booking-modal.price'/>
                             {dataProfile && dataProfile.Doctor_Infor && language === LANGUAGES.VI &&                      
                                 <NumericFormat 
                                     className='currency'
